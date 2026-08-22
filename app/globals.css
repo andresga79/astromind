@@ -680,6 +680,9 @@ h2 {
 .form-status.is-error { color: #ff8a8d; }
 .form-status.is-ok { color: var(--brand-strong); }
 
+/* Honeypot: fuera de pantalla y del flujo de tabulación */
+.honey { position: absolute; left: -9999px; opacity: 0; }
+
 /* FAQ */
 
 .faq-list { max-width: 760px; }
