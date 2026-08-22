@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astromind Tecnología — Software a medida, automatización e IA</title>
+  <meta name="description" content="Diseñamos y construimos sistemas que eliminan el trabajo manual de tu operación: software a medida, automatización de procesos e inteligencia artificial. Diagnóstico inicial sin costo.">
+  <link rel="canonical" href="https://astromind.cl/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Astromind Tecnología">
+  <meta property="og:title" content="Astromind Tecnología — Software a medida, automatización e IA">
+  <meta property="og:description" content="Sistemas que eliminan el trabajo manual de tu operación: software a medida, automatización de procesos e inteligencia artificial. Diagnóstico inicial sin costo.">
+  <meta property="og:url" content="https://astromind.cl/">
+  <meta property="og:locale" content="es_CL">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--
+DIRECCIÓN — Astromind one-pager (Persuade)
+THESIS: el hero demuestra el mecanismo — un agente resolviendo tareas en vivo —
+en vez de anunciar un nombre de empresa con tagline vacío. Rechaza el hero
+"logo + eslogan" del sitio anterior.
+OWN-WORLD: vacío casi negro #030407 con starfield sutil; un solo acento, cian
+eléctrico #2fa8e0, siempre con tinta oscura encima (7.6:1); Space Grotesk
+display; paneles de borde fino sin glass; tipografía tabular en la maqueta.
+STORY: el visitante entiende en el primer viewport qué se vende (software a
+medida, automatización, IA), ve al agente trabajar, y actúa: diagnóstico
+gratuito en el formulario.
+FIRST VIEWPORT: izquierda, H1 con la oferta + sub con prueba + CTA primario a
+#contacto; derecha, maqueta AstrhorusAI con tareas resolviéndose en bucle.
+Nav de 4 anclas arriba; en móvil, H1 y CTA visibles sin scroll.
+FORM: refinamiento del mundo establecido del sitio en producción ("mantener
+pero elevar", decisión del dueño). Code-led.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the
+finish review, the verdict, DESIGN.md, and every shipping raster carrying its
+provenance.
+-->
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Astromind Tecnología — inicio">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M16 2 L19 13 L30 16 L19 19 L16 30 L13 19 L2 16 L13 13 Z" fill="var(--brand)"/>
+        </svg>
+        <span class="brand-name">Astromind</span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú de navegación">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#casos">Casos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- HERO: la oferta en el H1, el mecanismo demostrado a la derecha -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Software a medida, automatización e inteligencia artificial</h1>
+          <p class="hero-sub">Diseñamos y construimos los sistemas que eliminan el trabajo manual de tu operación: cotizaciones que se responden solas, datos que dejan de copiarse entre planillas, procesos que corren aunque nadie los vigile.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contacto">Solicitar diagnóstico gratuito</a>
+            <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+          </div>
+          <p class="hero-note">Diagnóstico inicial sin costo · Propuesta a medida según tu operación · Acompañamiento durante todo el desarrollo</p>
+        </div>
+
+        <div class="hero-demo" role="img" aria-label="Demostración: el agente AstrhorusAI filtra un lead de WhatsApp, evalúa su puntaje y agenda la reunión en el calendario automáticamente">
+          <div class="demo-panel">
+            <div class="demo-head">
+              <span class="demo-dot" aria-hidden="true"></span>
+              <span class="demo-title">AstrhorusAI · agente en acción</span>
+              <span class="demo-status" id="demo-status">procesando</span>
+            </div>
+            <ul class="demo-list" id="demo-list">
+              <li class="demo-task" data-task>
+                <span class="task-icon" aria-hidden="true"></span>
+                <span class="task-text">Lead nuevo por WhatsApp: «Quiero cotizar para el viernes»</span>
+              </li>
+              <li class="demo-task" data-task>
+                <span class="task-icon" aria-hidden="true"></span>
+                <span class="task-text">Filtrando lead · puntaje 86%</span>
+              </li>
+              <li class="demo-task" data-task>
+                <span class="task-icon" aria-hidden="true"></span>
+                <span class="task-text">Regla: solo agendar con puntaje mayor a 70%</span>
+              </li>
+              <li class="demo-task" data-task>
+                <span class="task-icon" aria-hidden="true"></span>
+                <span class="task-text">Reunión agendada en Google Calendar · viernes 10:30</span>
+              </li>
+              <li class="demo-task demo-task-ok" data-task>
+                <span class="task-icon" aria-hidden="true"></span>
+                <span class="task-text">Resumen del día enviado · 0 tareas pendientes</span>
+              </li>
+            </ul>
+            <div class="demo-foot" aria-hidden="true">AstrhorusAI está en investigación · pilotos disponibles</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS: registro editorial, no grilla de tarjetas -->
+    <section class="section" id="servicios" aria-labelledby="servicios-title">
+      <div class="container servicios-grid">
+        <div class="section-lead">
+          <h2 id="servicios-title">Lo que construimos</h2>
+          <p>Cada proyecto parte de tu proceso real — no de una plantilla. Primero diagnosticamos dónde se te escapa el tiempo, después construimos sobre eso.</p>
+        </div>
+        <div class="servicios-list">
+          <article class="servicio">
+            <h3>Software a medida</h3>
+            <p>Sistemas web y APIs hechos para tu proceso exacto, no para el proceso promedio del mercado. Tu operación deja de doblarse para caber en una herramienta genérica.</p>
+            <p class="servicio-meta">Angular · Node · PostgreSQL · despliegue en la nube</p>
+          </article>
+          <article class="servicio">
+            <h3>Automatización de procesos</h3>
+            <p>Conectamos las herramientas que ya usas para que los datos fluyan sin copiar y pegar: WhatsApp, calendarios, planillas, facturación.</p>
+            <p class="servicio-meta">Integraciones · flujos sin código innecesario · reglas tuyas</p>
+          </article>
+          <article class="servicio">
+            <h3>Inteligencia artificial aplicada</h3>
+            <p>Agentes que filtran, clasifican, responden y agendan siguiendo reglas que tú defines. IA aplicada a tareas concretas, no a demostraciones.</p>
+            <p class="servicio-meta">Nuestro motor: AstrhorusAI · en investigación</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="section" id="productos" aria-labelledby="productos-title">
+      <div class="container">
+        <h2 id="productos-title">Productos propios</h2>
+        <div class="productos-grid">
+          <article class="producto producto-lead">
+            <div class="producto-head">
+              <h3>Turisters</h3>
+              <span class="badge badge-live">en producción</span>
+            </div>
+            <p>Plataforma de gestión y venta de experiencias turísticas para operadores pequeños y medianos: inventario, reservas y pagos en un solo lugar.</p>
+            <a class="producto-link" href="https://turisters.cl" target="_blank" rel="noopener noreferrer">Visitar turisters.cl<span class="link-arrow" aria-hidden="true"> →</span></a>
+          </article>
+          <article class="producto">
+            <div class="producto-head">
+              <h3>AstrhorusAI</h3>
+              <span class="badge badge-lab">en investigación</span>
+            </div>
+            <p>Nuestro motor de agentes de IA: filtra leads, responde consultas repetitivas y agenda reuniones con las reglas de tu negocio. Lo viste trabajando en el inicio.</p>
+            <p class="producto-note">Pilotos disponibles — pregúntanos en el diagnóstico.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASOS: cifras del piloto, etiquetadas con honestidad -->
+    <!-- TODO(dueño): dar fuente a estas cifras o etiquetarlas como proyección antes de publicar -->
+    <section class="section" id="casos" aria-labelledby="casos-title">
+      <div class="container casos-grid">
+        <div class="section-lead">
+          <h2 id="casos-title">Qué se puede esperar</h2>
+          <p>Cifras medidas en nuestro piloto interno de automatización, comparando el proceso antes y después. En el diagnóstico te mostramos la metodología y proyectamos el tuyo.</p>
+        </div>
+        <dl class="casos-ledger">
+          <div class="caso-row">
+            <dt>Errores de proceso manual</dt>
+            <dd><span class="caso-num">−75%</span><span class="caso-label">con validaciones automáticas</span></dd>
+          </div>
+          <div class="caso-row">
+            <dt>Eficiencia operativa</dt>
+            <dd><span class="caso-num">+85%</span><span class="caso-label">en tareas repetitivas</span></dd>
+          </div>
+          <div class="caso-row">
+            <dt>Costo operativo</dt>
+            <dd><span class="caso-num">−40%</span><span class="caso-label">del proceso automatizado</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- TRABAJAMOS CON: herramientas, no partnerships -->
+    <section class="section section-tools" aria-labelledby="tools-title">
+      <div class="container">
+        <h2 id="tools-title">Trabajamos con</h2>
+        <p class="tools-sub">Construimos sobre esta infraestructura y estos modelos:</p>
+        <ul class="tools-row">
+          <li>AWS</li>
+          <li>Google Cloud</li>
+          <li>OpenAI</li>
+          <li>Meta</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto" aria-labelledby="contacto-title">
+      <div class="container contacto-grid">
+        <div class="section-lead">
+          <h2 id="contacto-title">Empecemos por tu diagnóstico</h2>
+          <p>Cuéntanos qué proceso te está quitando tiempo. Respondemos con un diagnóstico inicial sin costo y una propuesta a medida según tu operación.</p>
+          <ul class="contacto-bullets">
+            <li>Diagnóstico inicial sin costo</li>
+            <li>Propuesta a medida según tu operación</li>
+            <li>Acompañamiento durante todo el desarrollo</li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="f-nombre">Nombre</label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required minlength="2">
+            <p class="field-error" id="e-nombre" role="alert" hidden>Ingresa tu nombre.</p>
+          </div>
+          <div class="field">
+            <label for="f-email">Correo</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+            <p class="field-error" id="e-email" role="alert" hidden>Ingresa un correo válido.</p>
+          </div>
+          <div class="field">
+            <label for="f-empresa">Empresa <span class="opcional">(opcional)</span></label>
+            <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-mensaje">¿Qué proceso quieres mejorar?</label>
+            <textarea id="f-mensaje" name="mensaje" rows="4" required minlength="10"></textarea>
+            <p class="field-error" id="e-mensaje" role="alert" hidden>Cuéntanos un poco más (mínimo 10 caracteres).</p>
+          </div>
+          <button class="btn btn-primary btn-submit" type="submit">Enviar mensaje</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title">Preguntas frecuentes</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>¿Qué valor me entrega una solución tecnológica?</summary>
+            <div class="faq-body">
+              <p>Tu operación deja de depender de planillas y mensajes sueltos: los datos viven en un sistema, los procesos repetitivos corren solos y tú ves el estado completo de tu negocio en una sola pantalla. El valor concreto se mide en horas recuperadas y errores que dejan de ocurrir.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Cuánto demora un proyecto?</summary>
+            <div class="faq-body">
+              <p>Depende del alcance: un piloto de automatización es cuestión de semanas; un sistema a medida completo, de meses. En el diagnóstico inicial te damos un plazo concreto para tu caso antes de que comprometas nada.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Qué pasa después de la entrega?</summary>
+            <div class="faq-body">
+              <p>No entregamos y desaparecemos: acompañamos todo el desarrollo y quedamos disponibles para soporte y mejoras. El sistema es tuyo y evoluciona con tu operación.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>¿Trabajan con cualquier rubro?</summary>
+            <div class="faq-body">
+              <p>Sí, mientras exista un proceso con pasos repetitivos y datos que se muevan entre personas. Turismo, servicios, retail y operaciones internas son nuestro terreno habitual.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">Astromind Tecnología</p>
+      <nav aria-label="Navegación del pie">
+        <ul class="footer-nav">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#casos">Casos</a></li>
+          <li><a href="#faq">Preguntas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">Software a medida, automatización e inteligencia artificial · Chile</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
