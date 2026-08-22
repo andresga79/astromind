@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-22T14:00:00-04:00",
+  "title": "Design System: Astromind Tecnología",
+  "extensions": {
+    "colorMeta": {
+      "bg": { "role": "neutral", "displayName": "Void", "canonical": "#030407" },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#030407", "purpose": "Text on accent; same value as bg, distinct role." },
+      "surface": { "role": "neutral", "displayName": "Surface", "canonical": "#0e131a" },
+      "surface-2": { "role": "neutral", "displayName": "Surface Raised", "canonical": "#121822" },
+      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "rgba(170, 179, 191, 0.16)", "purpose": "Every border and divider in the system." },
+      "text": { "role": "neutral", "displayName": "Text", "canonical": "#f3f6f9" },
+      "text-2": { "role": "neutral", "displayName": "Text Secondary", "canonical": "#aab3bf" },
+      "muted": { "role": "neutral", "displayName": "Muted", "canonical": "#8b95a5", "purpose": "Tertiary copy; 6.16:1 on surface (WCAG verified)." },
+      "brand": { "role": "primary", "displayName": "Electric Cyan", "canonical": "#2fa8e0", "purpose": "The single accent. 7.61:1 on bg; carries ink text at 7.61:1.", "tonalRamp": ["#03141d", "#07283a", "#0b425e", "#12608a", "#2fa8e0", "#63c2ec", "#a5dcf6", "#e2f4fd"] },
+      "brand-strong": { "role": "primary", "displayName": "Cyan Bright", "canonical": "#63c2ec", "purpose": "Hover/strong accent step for small text and focus rings." },
+      "error-border": { "role": "functional", "displayName": "Error Border", "canonical": "#e5484d", "purpose": "Invalid field borders only." },
+      "error-text": { "role": "functional", "displayName": "Error Text", "canonical": "#ff8a8d", "purpose": "Inline errors and error status lines." },
+      "scrollbar-thumb": { "role": "neutral", "displayName": "Scrollbar Grey", "canonical": "#2a3242", "purpose": "Browser scrollbar thumb on void track." }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero H1 only. Space Grotesk 600, max-width 16ch, text-wrap balance." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s." },
+      "title": { "displayName": "Title", "purpose": "H3s (services, products) and pilot metric numbers." },
+      "body": { "displayName": "Body", "purpose": "All paragraphs in Inter; measure caps 42–62ch." },
+      "label": { "displayName": "Label", "purpose": "Badges only (uppercase). Small meta copy plays the secondary-label role." }
+    },
+    "shadows": [
+      { "name": "hero-object", "value": "0 24px 48px -24px rgba(0, 0, 0, 0.8), 0 2px 6px rgba(0, 0, 0, 0.4)", "purpose": "Demo panel only — the system's single shadow, marking the page's most important object." }
+    ],
+    "motion": [
+      { "name": "state", "value": "160ms ease-out", "purpose": "Default for color/border/background state transitions (links, buttons, inputs)." },
+      { "name": "toggle", "value": "200ms ease-out", "purpose": "Nav hamburger morph and FAQ '+' rotation." },
+      { "name": "task-fill", "value": "400ms–500ms ease-out", "purpose": "Demo task icon fill and row opacity changes." },
+      { "name": "pulse", "value": "2.4s / 1.2s ease-in-out infinite", "purpose": "Demo status dot / active task ring pulse." },
+      { "name": "reduced-motion", "value": "animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; iteration-count: 1", "purpose": "Global shutdown under prefers-reduced-motion; demo renders all-done, starfield absent." }
+    ],
+    "breakpoints": [
+      { "name": "grid-collapse", "value": "980px" },
+      { "name": "nav", "value": "820px" },
+      { "name": "compact", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Cyan with ink text; the page's main persuasion control.",
+      "html": "<button class=\"ds-btn-primary\">Solicitar diagnóstico gratuito</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.75rem 1.5rem; border: 1px solid transparent; border-radius: 10px; background: #2fa8e0; color: #030407; font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color 160ms ease-out, transform 160ms ease-out; } .ds-btn-primary:hover, .ds-btn-primary:focus-visible { background: #63c2ec; } .ds-btn-primary:active { transform: translateY(1px); } .ds-btn-primary:focus-visible { outline: 2px solid #63c2ec; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action: transparent with hairline border.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Ver servicios</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.75rem 1.5rem; border: 1px solid rgba(170, 179, 191, 0.16); border-radius: 10px; background: transparent; color: #f3f6f9; font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif; font-size: 1rem; font-weight: 600; text-decoration: none; cursor: pointer; transition: border-color 160ms ease-out, color 160ms ease-out; } .ds-btn-ghost:hover, .ds-btn-ghost:focus-visible { border-color: #2fa8e0; color: #63c2ec; } .ds-btn-ghost:focus-visible { outline: 2px solid #63c2ec; outline-offset: 2px; }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Void-colored field cut into a surface panel; hairline border, 48px height.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-input\">Correo</label><input class=\"ds-input\" id=\"ds-input\" type=\"email\" placeholder=\"tu@empresa.cl\"></div>",
+      "css": ".ds-field-label { display: block; font-family: 'Inter', system-ui, sans-serif; font-weight: 500; margin-bottom: 0.4rem; color: #f3f6f9; } .ds-input { width: 100%; background: #030407; border: 1px solid rgba(170, 179, 191, 0.16); border-radius: 10px; color: #f3f6f9; font: inherit; padding: 0.75rem 1rem; min-height: 48px; caret-color: #63c2ec; transition: border-color 160ms ease-out; } .ds-input:focus-visible { outline: 2px solid #63c2ec; outline-offset: 1px; border-color: #2fa8e0; } .ds-input[aria-invalid=\"true\"] { border-color: #e5484d; }"
+    },
+    {
+      "name": "Badge — Live",
+      "kind": "chip",
+      "refersTo": "badge-live",
+      "description": "Status pill for shipped products; cyan-tinted.",
+      "html": "<span class=\"ds-badge-live\">en producción</span>",
+      "css": ".ds-badge-live { display: inline-block; font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 999px; white-space: nowrap; background: rgba(47, 168, 224, 0.16); color: #63c2ec; border: 1px solid rgba(47, 168, 224, 0.35); }"
+    },
+    {
+      "name": "Badge — Lab",
+      "kind": "chip",
+      "refersTo": "badge-lab",
+      "description": "Status pill for research-stage products; neutral, honest.",
+      "html": "<span class=\"ds-badge-lab\">en investigación</span>",
+      "css": ".ds-badge-lab { display: inline-block; font-family: 'Inter', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 999px; white-space: nowrap; background: rgba(170, 179, 191, 0.12); color: #aab3bf; border: 1px solid rgba(170, 179, 191, 0.16); }"
+    },
+    {
+      "name": "Ledger Row",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Signature content pattern: hairline-divided rows, not cards.",
+      "html": "<div class=\"ds-ledger-row\"><span class=\"ds-ledger-term\">Errores de proceso manual</span><span class=\"ds-ledger-num\">−75%</span></div>",
+      "css": ".ds-ledger-row { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 1.4rem 0; border-bottom: 1px solid rgba(170, 179, 191, 0.16); } .ds-ledger-term { color: #f3f6f9; font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 1.1rem; } .ds-ledger-num { font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif; font-size: 2rem; font-weight: 600; letter-spacing: -0.02em; color: #63c2ec; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Demo Panel",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "The system's single shadowed object and only authored motion moment.",
+      "html": "<div class=\"ds-demo-panel\"><div class=\"ds-demo-head\"><span class=\"ds-demo-dot\"></span><span class=\"ds-demo-title\">AstrhorusAI · agente en acción</span><span class=\"ds-demo-status\">procesando</span></div><ul class=\"ds-demo-list\"><li class=\"ds-demo-task ds-demo-task-done\"><span class=\"ds-task-icon\"></span><span class=\"ds-task-text\">Reunión agendada en Google Calendar · viernes 10:30</span></li><li class=\"ds-demo-task ds-demo-task-active\"><span class=\"ds-task-icon\"></span><span class=\"ds-task-text\">Filtrando lead · puntaje 86%</span></li></ul><div class=\"ds-demo-foot\">AstrhorusAI está en investigación · pilotos disponibles</div></div>",
+      "css": ".ds-demo-panel { background: #0e131a; border: 1px solid rgba(170, 179, 191, 0.16); border-radius: 24px; overflow: hidden; box-shadow: 0 24px 48px -24px rgba(0, 0, 0, 0.8), 0 2px 6px rgba(0, 0, 0, 0.4); font-family: 'Inter', system-ui, sans-serif; max-width: 420px; } .ds-demo-head { display: flex; align-items: center; gap: 0.6rem; padding: 0.9rem 1.25rem; border-bottom: 1px solid rgba(170, 179, 191, 0.16); background: #121822; } .ds-demo-dot { width: 9px; height: 9px; border-radius: 50%; background: #2fa8e0; animation: ds-pulse 2.4s ease-in-out infinite; } @keyframes ds-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } } .ds-demo-title { font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 0.9rem; color: #f3f6f9; } .ds-demo-status { margin-left: auto; font-size: 0.78rem; color: #8b95a5; font-variant-numeric: tabular-nums; } .ds-demo-list { list-style: none; margin: 0; padding: 0.5rem; } .ds-demo-task { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.8rem 0.85rem; border-radius: 16px; opacity: 0.58; transition: opacity 500ms ease-out, background-color 500ms ease-out; } .ds-demo-task-active { opacity: 1; background: #121822; } .ds-demo-task-done { opacity: 1; } .ds-demo-task-done .ds-task-text { color: #aab3bf; } .ds-task-icon { flex: none; width: 20px; height: 20px; margin-top: 2px; border-radius: 50%; border: 2px solid #8b95a5; position: relative; transition: border-color 400ms ease-out, background-color 400ms ease-out; } .ds-demo-task-active .ds-task-icon { border-color: #2fa8e0; } .ds-demo-task-done .ds-task-icon { border-color: #2fa8e0; background: #2fa8e0; } .ds-demo-task-done .ds-task-icon::after { content: \"\"; position: absolute; left: 5px; top: 2px; width: 5px; height: 9px; border: solid #030407; border-width: 0 2px 2px 0; transform: rotate(42deg); } .ds-task-text { font-size: 0.95rem; line-height: 1.45; color: #f3f6f9; font-variant-numeric: tabular-nums; } .ds-demo-foot { padding: 0.75rem 1.25rem; border-top: 1px solid rgba(170, 179, 191, 0.16); font-size: 0.8rem; color: #8b95a5; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Sticky header nav with 44px targets; hover lifts to surface-2 pill.",
+      "html": "<nav class=\"ds-nav\"><ul><li><a href=\"#servicios\">Servicios</a></li><li><a href=\"#contacto\">Contacto</a></li></ul></nav>",
+      "css": ".ds-nav ul { display: flex; gap: 0.25rem; list-style: none; margin: 0; padding: 0; } .ds-nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0.5rem 0.9rem; border-radius: 10px; color: #aab3bf; text-decoration: none; font-family: 'Inter', system-ui, sans-serif; font-weight: 500; transition: color 160ms ease-out, background-color 160ms ease-out; } .ds-nav a:hover, .ds-nav a:focus-visible { color: #f3f6f9; background: #121822; } .ds-nav a:focus-visible { outline: 2px solid #63c2ec; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Observatory",
+    "overview": "A near-black observatory field: the void (#030407) is the dominant material, a subtle drifting starfield gives it depth without decoration, and one electric cyan instrument — the brand accent — carries every point of attention. This is the incumbent visual world of astromind.cl (\"dark cósmico\", owner decision: keep but elevate), refined code-first: same hues, same faces, tighter discipline. Depth comes from thin borders, two tonal surface steps, and one shadowed hero object — never from glass, gradients, or glow.\n\nThe world's single authored motion moment is the agent demo panel in the hero: a ledger of tasks resolving themselves in a loop while a status dot pulses. Everything else is calm — 160ms state transitions, a slow starfield drift, no scroll animations, no reveals. Typography is two incumbent brand faces kept deliberately: Space Grotesk for display (geometric, slightly technical) and Inter for body (neutral, high legibility), with tabular numerals wherever the interface reports data.\n\nContrast is a system value, not an afterthought: every key pair in this document was WCAG-verified. All interactive targets are at least 44×44px.",
+    "keyCharacteristics": [
+      "One-accent discipline: cyan #2fa8e0 is the only hue; it always carries dark ink text on top, never white.",
+      "Flat, bordered surfaces on two tonal steps; a single shadowed object (the demo panel) per view.",
+      "Ledger lists and editorial rows instead of card grids for anything content-bearing.",
+      "One authored motion moment (demo panel); starfield as ambient secondary; full reduced-motion shutdown.",
+      "Browser chrome (selection, scrollbar, caret, focus ring) is themed from the palette."
+    ],
+    "rules": [
+      { "name": "The One Instrument Rule", "body": "Cyan is the only hue on any screen. Its rarity is the point: if two elements compete for accent, one of them is wrong.", "section": "colors" },
+      { "name": "The Ink-On-Cyan Rule", "body": "The accent always carries dark ink text (#030407 on #2fa8e0 = 7.61:1), never white. Cyan as text is reserved for the bright step (#63c2ec) or larger display sizes.", "section": "colors" },
+      { "name": "The Verified Pair Rule", "body": "Any new text/background pair must be checked against WCAG AA before shipping. Established pairs: ink on brand 7.61:1; muted on surface 6.16:1; brand on bg 7.61:1; demo-task dimmed text (opacity 0.58) 6.34:1.", "section": "colors" },
+      { "name": "The Tabular Data Rule", "body": "Any text that reports numbers — demo task lines, status, pilot metrics — uses font-variant-numeric: tabular-nums, so digits don't dance as the demo loops.", "section": "typography" },
+      { "name": "The Two-Face Rule", "body": "No third typeface enters this world. Display is always Space Grotesk 500–600; body is always Inter 400–500.", "section": "typography" },
+      { "name": "The One Shadow Rule", "body": "One shadowed object per view. If a second element seems to need elevation, give it a surface step and a hairline instead.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep cyan as the only hue and give it ink text (7.61:1); use #63c2ec for accent text at small sizes.",
+      "Do build depth with surface steps (#0e131a → #121822) and 1px hairlines before considering a shadow.",
+      "Do use the asymmetric 5fr/7fr grid with a sticky lead column for content sections; use ledger rows for lists.",
+      "Do set font-variant-numeric: tabular-nums on every numeric interface text.",
+      "Do hold interactive targets at ≥44px and theme browser surfaces (selection, caret, scrollbar, focus ring) from the palette.",
+      "Do honor prefers-reduced-motion: static done-state demo, no starfield, no smooth scroll, transitions collapsed to 0.01ms."
+    ],
+    "donts": [
+      "Don't add a second accent color, gradient, or glow — the void + one cyan instrument is the world.",
+      "Don't shadow more than one object per view; the demo panel owns the system's only shadow.",
+      "Don't use glass/backdrop-blur panels — the sticky header's blur is a scroll-legibility exception, not a pattern.",
+      "Don't ship a text/background pair without a WCAG check; the four verified pairs are the floor, not the ceiling.",
+      "Don't replace ledger rows with card grids, or add a third typeface, or introduce scroll-triggered reveals — motion here is one authored moment plus 160ms state changes.",
+      "Don't use white text on cyan, or cyan #2fa8e0 for small text where #63c2ec is the legible choice."
+    ]
+  }
+}
