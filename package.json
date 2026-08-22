@@ -18,6 +18,10 @@
     "next": "^15.5.23",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.11"
   }
 }
