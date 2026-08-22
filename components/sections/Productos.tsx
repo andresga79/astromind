@@ -4,28 +4,8 @@ export default function Productos() {
     <section className="section" id="productos" aria-labelledby="productos-title">
       <div className="container">
         <h2 id="productos-title">Productos propios</h2>
-        <div className="productos-grid">
+        <div className="productos-grid solo">
           <article className="producto producto-lead">
-            <div className="producto-head">
-              <h3>Turisters</h3>
-              <span className="badge badge-live">en producción</span>
-            </div>
-            <p>
-              Plataforma de gestión y venta de experiencias turísticas para
-              operadores pequeños y medianos: inventario, reservas y pagos en un
-              solo lugar.
-            </p>
-            <a
-              className="producto-link"
-              href="https://turisters.cl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visitar turisters.cl
-              <span className="link-arrow" aria-hidden="true"> →</span>
-            </a>
-          </article>
-          <article className="producto">
             <div className="producto-head">
               <h3>AstrhorusAI</h3>
               <span className="badge badge-lab">en investigación</span>
@@ -36,7 +16,9 @@ export default function Productos() {
               viste trabajando en el inicio.
             </p>
             <p className="producto-note">
-              Pilotos disponibles — pregúntanos en el diagnóstico.
+              Pilotos disponibles — pregúntanos en el diagnóstico. Nuestro
+              primer producto, Turisters, ya está en producción: lo conoces en
+              el caso de estudio.
             </p>
           </article>
         </div>
