@@ -501,7 +501,7 @@ h2 {
 
 .producto-link:hover, .producto-link:focus-visible { color: var(--brand); text-decoration: underline; text-underline-offset: 4px; }
 
-/* Casos: libro mayor, no mosaico de números */
+/* Casos: caso de estudio Turisters (libro mayor, no mosaico de números) */
 
 .casos-grid {
   display: grid;
@@ -511,6 +511,37 @@ h2 {
 }
 
 .casos-grid .section-lead { position: sticky; top: 96px; }
+
+.caso-body > .caso-bloque {
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.caso-body > .caso-bloque:first-child { padding-top: 0.5rem; }
+
+.caso-bloque h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.6rem;
+}
+
+.caso-bloque p {
+  color: var(--text-2);
+  max-width: 58ch;
+  margin: 0 0 1rem;
+}
+
+.caso-bloque .casos-ledger { margin-top: 0.75rem; }
+
+.caso-pendiente {
+  color: var(--muted);
+  border-bottom: 2px dashed var(--line);
+  padding-inline: 0.35em;
+}
+
+.productos-grid.solo { grid-template-columns: minmax(0, 1fr); }
 
 .casos-ledger { margin: 0; }
 

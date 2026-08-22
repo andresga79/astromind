@@ -39,5 +39,7 @@ importa es el envío del formulario de contacto (diagnóstico inicial sin costo)
 - Transparencia del estado temprano de AstrhorusAI ("en investigación").
 
 ## Reemplazos pendientes (claims sin fuente)
-1. Métricas 75/85/40: fuente o etiqueta de proyección.
+1. Métricas del caso Turisters (operadores activos, reservas gestionadas,
+   tiempo por reserva): placeholders "—" en components/sections/Casos.tsx;
+   el dueño llena con cifras reales o se borran las filas. No inventar.
 2. Respuestas FAQ: revisar plazos/alcances reales con el dueño.
