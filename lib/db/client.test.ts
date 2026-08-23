@@ -8,7 +8,7 @@ vi.hoisted(() => {
 
 describe("getDb", () => {
   beforeAll(async () => {
-    const db = getDb();
+    const db = await getDb();
     await db.execute(`
       CREATE TABLE IF NOT EXISTS leads (
         id SERIAL PRIMARY KEY,
@@ -22,12 +22,12 @@ describe("getDb", () => {
   });
 
   afterAll(async () => {
-    const db = getDb();
+    const db = await getDb();
     await db.execute(`DELETE FROM leads WHERE email = 'ana@empresa.cl';`);
   });
 
   it("inserta y lee un lead", async () => {
-    const db = getDb();
+    const db = await getDb();
     const [inserted] = await db.insert(leads).values({
       nombre: "Ana",
       email: "ana@empresa.cl",

@@ -10,7 +10,7 @@ vi.hoisted(() => {
 });
 
 beforeAll(async () => {
-  const db = getDb();
+    const db = await getDb();
   await db.execute(`
     CREATE TABLE IF NOT EXISTS leads (
       id SERIAL PRIMARY KEY,
@@ -36,7 +36,7 @@ function req(body: unknown, ip = "1.1.1.1") {
 afterEach(() => __resetRateLimiter());
 
 afterAll(async () => {
-  const db = getDb();
+    const db = await getDb();
   await db.execute(`DELETE FROM leads WHERE email = 'ana@empresa.cl';`);
 });
 

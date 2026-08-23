@@ -30,7 +30,7 @@ export async function POST(req: Request) {
   }
 
   try {
-    const db = getDb();
+    const db = await getDb();
     await db.insert(leads).values({
       nombre: parsed.data.nombre,
       email: parsed.data.email,

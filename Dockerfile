@@ -11,6 +11,10 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
+FROM build AS migrate
+ENV NODE_ENV=production
+CMD ["npm", "run", "db:migrate"]
+
 FROM node:22-alpine AS runtime
 WORKDIR /app
 ENV NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 PORT=3000
