@@ -7,8 +7,8 @@ export default function Productos() {
         <div className="productos-grid solo">
           <article className="producto producto-lead">
             <div className="producto-head">
-              <h3>AstrhorusAI</h3>
-              <span className="badge badge-lab">en investigación</span>
+              <h3>Astra</h3>
+              <span className="badge badge-live">disponible</span>
             </div>
             <p>
               Nuestro motor de agentes de IA: filtra leads, responde consultas
@@ -16,8 +16,8 @@ export default function Productos() {
               viste trabajando en el inicio.
             </p>
             <p className="producto-note">
-              Pilotos disponibles — pregúntanos en el diagnóstico. Nuestro
-              primer producto, Turisters, ya está en producción: lo conoces en
+              Ya en producción — pregúntanos en el diagnóstico. Nuestro primer
+              producto, Bitácora, también está en producción: lo conoces en
               el caso de estudio.
             </p>
           </article>

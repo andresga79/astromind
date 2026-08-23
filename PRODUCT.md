@@ -8,10 +8,12 @@ Astromind Tecnología es una empresa chilena de desarrollo de software. Ofrece t
 servicios: software a medida, automatización de procesos e inteligencia artificial
 aplicada. Además desarrolla dos productos propios:
 
-- **AstrhorusAI** — motor de agentes de IA (filtrado de leads, respuestas,
-  agendado automático). Estado: en investigación, con pilotos.
-- **Turisters** — plataforma de experiencias turísticas para operadores
-  (turisters.cl).
+- **Astra** — motor de agentes de IA (filtrado de leads, respuestas,
+  agendado automático). Estado: terminado, disponible. Compite con Vambe
+  a menor costo.
+- **Bitácora** — plataforma de experiencias turísticas para operadores.
+  Renombrada desde "Turisters"; el dominio sigue siendo turisters.cl hasta
+  que se migre a un dominio propio de Bitácora.
 
 ## Audiencia
 Pymes chilenas con procesos manuales ( WhatsApp, planillas, calendarios ) que
@@ -36,10 +38,10 @@ importa es el envío del formulario de contacto (diagnóstico inicial sin costo)
 - Tema "dark cósmico" (#030407, cian #2fa8e0, starfield) es la identidad
   elegida: mantener, pero elevar (decisión explícita del dueño).
 - Tuteo en todo el copy.
-- Transparencia del estado temprano de AstrhorusAI ("en investigación").
+- Astra ya no está "en investigación": producto terminado y disponible.
 
 ## Reemplazos pendientes (claims sin fuente)
-1. Métricas del caso Turisters (operadores activos, reservas gestionadas,
+1. Métricas del caso Bitácora (operadores activos, reservas gestionadas,
    tiempo por reserva): placeholders "—" en components/sections/Casos.tsx;
    el dueño llena con cifras reales o se borran las filas. No inventar.
 2. Respuestas FAQ: revisar plazos/alcances reales con el dueño.

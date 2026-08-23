@@ -41,7 +41,7 @@ export default function Servicios() {
               demostraciones.
             </p>
             <p className="servicio-meta">
-              Nuestro motor: AstrhorusAI · en investigación
+              Nuestro motor: Astra · disponible
             </p>
           </article>
         </div>

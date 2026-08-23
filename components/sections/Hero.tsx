@@ -9,14 +9,18 @@ export default function Hero() {
       <section className="hero" aria-labelledby="hero-title">
         <div className="container hero-grid">
           <div className="hero-copy">
+            <p className="hero-eyebrow">
+              Software a medida · Automatización · Inteligencia artificial
+            </p>
             <h1 id="hero-title">
-              Software a medida, automatización e inteligencia artificial
+              Tecnología accesible para que tu pyme no se quede fuera de esta
+              nueva era
             </h1>
             <p className="hero-sub">
-              Diseñamos y construimos los sistemas que eliminan el trabajo manual
-              de tu operación: cotizaciones que se responden solas, datos que
-              dejan de copiarse entre planillas, procesos que corren aunque nadie
-              los vigile.
+              Construimos los sistemas que eliminan el trabajo manual de tu
+              operación: cotizaciones que se responden solas, datos que dejan
+              de copiarse entre planillas, procesos que corren aunque nadie
+              los vigile. A un costo pensado para pyme, no para corporación.
             </p>
             <div className="hero-actions">
               <a className="btn btn-primary" href="#contacto">

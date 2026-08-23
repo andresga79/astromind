@@ -1,12 +1,12 @@
-/* CASOS: el caso de estudio de Turisters — producto real, en producción */
+/* CASOS: el caso de estudio de Bitácora — producto real, en producción */
 // TODO(dueño): completar las tres métricas marcadas como pendientes (o borrar
-// las filas) antes de publicar. Son cifras reales de Turisters: no inventarlas.
+// las filas) antes de publicar. Son cifras reales de Bitácora: no inventarlas.
 export default function Casos() {
   return (
     <section className="section" id="casos" aria-labelledby="casos-title">
       <div className="container casos-grid">
         <div className="section-lead">
-          <h2 id="casos-title">El caso: Turisters</h2>
+          <h2 id="casos-title">El caso: Bitácora</h2>
           <p>
             Nuestro producto propio para operadores de experiencias turísticas —
             y la mejor demostración de cómo trabajamos: de proceso manual a
@@ -19,7 +19,7 @@ export default function Casos() {
             rel="noopener noreferrer"
             aria-label="Visitar turisters.cl (se abre en una pestaña nueva)"
           >
-            Ver Turisters en producción
+            Ver Bitácora en producción
             <span className="link-arrow" aria-hidden="true"> →</span>
           </a>
         </div>
@@ -37,7 +37,7 @@ export default function Casos() {
           <article className="caso-bloque">
             <h3>Lo que construimos</h3>
             <p>
-              Turisters centraliza toda la operación: inventario de experiencias
+              Bitácora centraliza toda la operación: inventario de experiencias
               con cupos reales, reservas en línea, pagos integrados y
               confirmaciones automáticas. El operador ve su negocio completo en
               una sola pantalla; el turista reserva y paga como en cualquier
@@ -52,7 +52,7 @@ export default function Casos() {
               y se dedica a la experiencia.
             </p>
             <dl className="casos-ledger">
-              {/* TODO(dueño): reemplazar cada "—" con la cifra real de Turisters */}
+              {/* TODO(dueño): reemplazar cada "—" con la cifra real de Bitácora */}
               <div className="caso-row">
                 <dt>Operadores activos</dt>
                 <dd>

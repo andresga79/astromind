@@ -197,6 +197,15 @@ h1 {
   max-width: 16ch;
 }
 
+.hero-eyebrow {
+  color: var(--brand-strong);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+
 .hero-sub {
   color: var(--text-2);
   max-width: 52ch;

@@ -41,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         STORY: el visitante entiende en el primer viewport qué se vende y actúa:
         diagnóstico gratuito en el formulario.
         FIRST VIEWPORT: izquierda, H1 con la oferta + CTA primario a #contacto;
-        derecha, maqueta AstrhorusAI con tareas resolviéndose en bucle.
+        derecha, maqueta Astra con tareas resolviéndose en bucle.
         FORM: refinamiento del mundo establecido del sitio en producción
         ("mantener pero elevar"). Code-led.
         FINISH: unreviewed and undocumented is unfinished; this build ends with

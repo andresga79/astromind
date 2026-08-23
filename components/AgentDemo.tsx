@@ -43,12 +43,12 @@ export default function AgentDemo() {
     <div
       className="hero-demo"
       role="img"
-      aria-label="Demostración: el agente AstrhorusAI filtra un lead de WhatsApp, evalúa su puntaje y agenda la reunión en el calendario automáticamente"
+      aria-label="Demostración: el agente Astra filtra un lead de WhatsApp, evalúa su puntaje y agenda la reunión en el calendario automáticamente"
     >
       <div className="demo-panel">
         <div className="demo-head">
           <span className="demo-dot" aria-hidden="true" />
-          <span className="demo-title">AstrhorusAI · agente en acción</span>
+          <span className="demo-title">Astra · agente en acción</span>
           <span className="demo-status" id="demo-status">
             {done ? "completado" : "procesando"}
           </span>
@@ -74,7 +74,7 @@ export default function AgentDemo() {
           })}
         </ul>
         <div className="demo-foot" aria-hidden="true">
-          AstrhorusAI está en investigación · pilotos disponibles
+          Astra · disponible ahora para tu operación
         </div>
       </div>
     </div>
