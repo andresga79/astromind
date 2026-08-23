@@ -38,7 +38,8 @@ export async function POST(req: Request) {
       mensaje: parsed.data.mensaje,
     }).run();
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (err) {
+    console.error("contact insert failed", err);
     return NextResponse.json(
       { error: "No pudimos enviar tu mensaje. Intenta nuevamente en unos minutos." },
       { status: 500 }
