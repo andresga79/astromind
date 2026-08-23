@@ -1,26 +1,41 @@
-import { afterAll, describe, expect, it } from "vitest";
-import { rmSync } from "node:fs";
+import { afterAll, beforeAll, describe, expect, it, vi } from "vitest";
 import { getDb } from "./client";
 import { leads } from "./schema";
 
-const TEST_DB = "/tmp/opencode/astromind-test.db";
+vi.hoisted(() => {
+  process.env.DATABASE_URL ??= "postgresql://postgres:postgres@localhost:55432/astromind_test";
+});
 
 describe("getDb", () => {
-  afterAll(() => {
-    try { rmSync(TEST_DB); } catch {}
+  beforeAll(async () => {
+    const db = getDb();
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS leads (
+        id SERIAL PRIMARY KEY,
+        nombre TEXT NOT NULL,
+        email TEXT NOT NULL,
+        empresa TEXT,
+        mensaje TEXT NOT NULL,
+        created_at TIMESTAMP NOT NULL DEFAULT now()
+      );
+    `);
   });
 
-  it("inserta y lee un lead", () => {
-    process.env.DB_PATH = TEST_DB;
+  afterAll(async () => {
     const db = getDb();
-    const inserted = db.insert(leads).values({
+    await db.execute(`DELETE FROM leads WHERE email = 'ana@empresa.cl';`);
+  });
+
+  it("inserta y lee un lead", async () => {
+    const db = getDb();
+    const [inserted] = await db.insert(leads).values({
       nombre: "Ana",
       email: "ana@empresa.cl",
       mensaje: "Quiero automatizar cotizaciones",
-    }).returning().get();
+    }).returning();
     expect(inserted.id).toBeGreaterThan(0);
     expect(inserted.empresa).toBeNull();
-    const rows = db.select().from(leads).all();
-    expect(rows).toHaveLength(1);
+    const rows = await db.select().from(leads);
+    expect(rows.length).toBeGreaterThan(0);
   });
 });

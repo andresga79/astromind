@@ -31,12 +31,12 @@ export async function POST(req: Request) {
 
   try {
     const db = getDb();
-    db.insert(leads).values({
+    await db.insert(leads).values({
       nombre: parsed.data.nombre,
       email: parsed.data.email,
       empresa: parsed.data.empresa ?? null,
       mensaje: parsed.data.mensaje,
-    }).run();
+    });
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("contact insert failed", err);

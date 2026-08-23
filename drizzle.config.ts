@@ -1,8 +1,8 @@
 import { defineConfig } from "drizzle-kit";
 
 export default defineConfig({
-  dialect: "sqlite",
+  dialect: "postgresql",
   schema: "./lib/db/schema.ts",
   out: "./lib/db/migrations",
-  dbCredentials: { url: process.env.DB_PATH ?? "./data/astromind.db" },
+  dbCredentials: { url: process.env.DATABASE_URL! },
 });

@@ -1,12 +1,26 @@
-import { afterAll, afterEach, describe, expect, it, vi } from "vitest";
-import { rmSync } from "node:fs";
+import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import { POST } from "./route";
+import { getDb } from "@/lib/db/client";
 import { __resetRateLimiter } from "@/lib/rate-limit";
 
 vi.hoisted(() => {
-  process.env.DB_PATH = "/tmp/opencode/astromind-api-test.db";
+  process.env.DATABASE_URL ??= "postgresql://postgres:postgres@localhost:55432/astromind_test";
   process.env.RATE_LIMIT_MAX = "2";
   process.env.RATE_LIMIT_WINDOW_MS = "60000";
+});
+
+beforeAll(async () => {
+  const db = getDb();
+  await db.execute(`
+    CREATE TABLE IF NOT EXISTS leads (
+      id SERIAL PRIMARY KEY,
+      nombre TEXT NOT NULL,
+      email TEXT NOT NULL,
+      empresa TEXT,
+      mensaje TEXT NOT NULL,
+      created_at TIMESTAMP NOT NULL DEFAULT now()
+    );
+  `);
 });
 
 const valid = { nombre: "Ana", email: "ana@empresa.cl", mensaje: "Quiero automatizar cotizaciones" };
@@ -21,8 +35,9 @@ function req(body: unknown, ip = "1.1.1.1") {
 
 afterEach(() => __resetRateLimiter());
 
-afterAll(() => {
-  try { rmSync("/tmp/opencode/astromind-api-test.db"); } catch {}
+afterAll(async () => {
+  const db = getDb();
+  await db.execute(`DELETE FROM leads WHERE email = 'ana@empresa.cl';`);
 });
 
 describe("POST /api/contact", () => {
