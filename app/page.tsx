@@ -14,7 +14,7 @@ function Footer() {
         <nav aria-label="Navegación del pie">
           <ul className="footer-nav">
             <li>
-              <a href="#funciones">Funciones</a>
+              <a href="#servicios">Servicios</a>
             </li>
             <li>
               <a href="#productos">Productos</a>
@@ -46,8 +46,8 @@ export default function Home() {
         <span id="top" />
         <Hero />
         <Servicios />
-
         <Productos />
+
         <Tools />
         <Contacto />
         <Faq />

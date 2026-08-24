@@ -1,8 +1,7 @@
-import AstraChatDemo from "@/components/astra/AstraChatDemo";
+import AgentDemo from "@/components/AgentDemo";
 import Starfield from "@/components/Starfield";
-import { astraCalendlyUrl } from "@/data/astra-config";
 
-/* HERO: Astra como producto, mecanismo demostrado a la derecha */
+/* HERO: la oferta en el H1, el mecanismo demostrado a la derecha */
 export default function Hero() {
   return (
     <>
@@ -11,31 +10,32 @@ export default function Hero() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <p className="hero-eyebrow">
-              Agente de IA para pymes · WhatsApp, Instagram y correo
+              Software a medida · Automatización · Inteligencia artificial
             </p>
             <h1 id="hero-title">
-              Astra responde, clasifica y agenda por ti — las 24 horas
+              Tecnología accesible para que tu pyme no se quede fuera de esta
+              nueva era
             </h1>
             <p className="hero-sub">
-              Tu cliente escribe a cualquier hora y Astra le responde al
-              instante, filtra quién compra, aclara dudas repetitivas y agenda
-              reuniones siguiendo las reglas de tu negocio. Sin perder una
-              venta por no alcanzar a contestar.
+              Construimos los sistemas que eliminan el trabajo manual de tu
+              operación: cotizaciones que se responden solas, datos que dejan
+              de copiarse entre planillas, procesos que corren aunque nadie
+              los vigile. A un costo pensado para pyme, no para corporación.
             </p>
             <div className="hero-actions">
-              <a className="btn btn-primary" href={astraCalendlyUrl} rel="noreferrer" target="_blank">
-                Agendar una demo
+              <a className="btn btn-primary" href="#contacto">
+                Solicitar diagnóstico gratuito
               </a>
-              <a className="btn btn-ghost" href="#funciones">
-                Ver qué hace
+              <a className="btn btn-ghost" href="#servicios">
+                Ver servicios
               </a>
             </div>
             <p className="hero-note">
-              Atiende en tus canales · Se configura con las reglas de tu negocio ·
-              Ya en producción
+              Diagnóstico inicial sin costo · Propuesta a medida según tu
+              operación · Acompañamiento durante todo el desarrollo
             </p>
           </div>
-          <AstraChatDemo />
+          <AgentDemo />
         </div>
       </section>
     </>

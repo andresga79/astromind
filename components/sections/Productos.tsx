@@ -16,11 +16,11 @@ export default function Productos() {
               viste trabajando en el inicio.
             </p>
             <p className="producto-note">
-              Ya en producción, respondiendo por ti en tus canales. Agenda una
-              demo y aprébalo con tus propios datos.
+              Ya en producción — agenda una demo y verás cómo atendería a tus
+              clientes. Conócelo en detalle.
             </p>
             <a className="producto-link" href="/astra">
-              Conoce Astra en detalle →
+              Conoce Astra →
             </a>
           </article>
         </div>

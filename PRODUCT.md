@@ -1,18 +1,19 @@
-# PRODUCT.md — Astromind (Astra)
+# PRODUCT.md — Astromind Tecnología
 
 > Fuente: inferido de la crítica de diseño del sitio en producción (2026-08-22) y las
 > respuestas del dueño. Suposiciones marcadas con [asunción].
->
-> Nota 2026-08-24: el negocio se enfoca 100% en Astra. La sección de Bitácora y el
-> caso Turisters fueron removidos de la landing.
 
 ## Qué es
-Astromind Tecnología es una empresa chilena de desarrollo de software. Está
-orientada por completo al producto **Astra**, motor de agentes de IA.
+Astromind Tecnología es una empresa chilena de desarrollo de software. Ofrece tres
+servicios: software a medida, automatización de procesos e inteligencia artificial
+aplicada. Además desarrolla dos productos propios:
 
 - **Astra** — motor de agentes de IA (filtrado de leads, respuestas,
   agendado automático). Estado: terminado, disponible. Compite con Vambe
   a menor costo.
+- **Bitácora** — plataforma de experiencias turísticas para operadores.
+  Renombrada desde "Turisters"; el dominio sigue siendo turisters.cl hasta
+  que se migre a un dominio propio de Bitácora.
 
 ## Audiencia
 Pymes chilenas con procesos manuales ( WhatsApp, planillas, calendarios ) que
@@ -21,11 +22,14 @@ quieren automatizar. El decisor suele ser el dueño o gerente de operaciones.
 
 ## Superficie principal
 One-pager en español (Chile), registro tuteo. Modo: **Persuade**. La acción que
-importa es agendar una demo de Astra (calendly.com/andresga79/astra-demo).
+importa es el envío del formulario de contacto (diagnóstico inicial sin costo).
 
 ## Prueba y contenido
-- La maqueta animada de la conversación con Astra es la demostración central:
-  es el material que muestra el producto trabajando.
+- La maqueta animada del agente (tareas resolviéndose) es la demostración
+  central: es el único material que muestra el producto trabajando.
+- Métricas del piloto interno (−75% errores, +85% eficiencia, −40% costo):
+  son afirmaciones del dueño tomadas del sitio actual; deben recibir fuente o
+  etiqueta antes de publicar. Ver TODO en index.html.
 - Logos "Trabajamos con": AWS, Google Cloud, OpenAI, Meta — herramientas sobre
   las que se construye, **no** partnerships formales. El framing del sitio debe
   decirlo así.
@@ -35,3 +39,9 @@ importa es agendar una demo de Astra (calendly.com/andresga79/astra-demo).
   elegida: mantener, pero elevar (decisión explícita del dueño).
 - Tuteo en todo el copy.
 - Astra ya no está "en investigación": producto terminado y disponible.
+
+## Reemplazos pendientes (claims sin fuente)
+1. Métricas del caso Bitácora (operadores activos, reservas gestionadas,
+   tiempo por reserva): placeholders "—" en components/sections/Casos.tsx;
+   el dueño llena con cifras reales o se borran las filas. No inventar.
+2. Respuestas FAQ: revisar plazos/alcances reales con el dueño.

@@ -57,7 +57,7 @@ export default function Header() {
         >
           <ul>
             <li>
-              <a href="#funciones">Funciones</a>
+              <a href="#servicios">Servicios</a>
             </li>
             <li>
               <a href="#productos">Productos</a>

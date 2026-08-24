@@ -5,44 +5,45 @@ export default function Faq() {
         <h2 id="faq-title">Preguntas frecuentes</h2>
         <div className="faq-list">
           <details className="faq-item">
-            <summary>¿Cómo responde Astra en mis canales?</summary>
+            <summary>¿Qué valor me entrega una solución tecnológica?</summary>
             <div className="faq-body">
               <p>
-                Conectas tu WhatsApp, Instagram y correo, y Astra atiende al
-                instante con la información de tu negocio. Responde consultas
-                repetitivas, comparte disponibilidad y solo deriva a tu equipo
-                los casos que requieren humanos.
+                Tu operación deja de depender de planillas y mensajes sueltos: los
+                datos viven en un sistema, los procesos repetitivos corren solos y
+                tú ves el estado completo de tu negocio en una sola pantalla. El
+                valor concreto se mide en horas recuperadas y errores que dejan de
+                ocurrir.
               </p>
             </div>
           </details>
           <details className="faq-item">
-            <summary>¿Cómo sé que responde bien a mis clientes?</summary>
+            <summary>¿Cuánto demora un proyecto?</summary>
             <div className="faq-body">
               <p>
-                Astra se entrena con tu información y reglas, y puedes revisar
-                cada conversación. Además califica y prioriza leads por ti, así
-                que ves quién está listo para comprar sin leer todo el chat.
+                Depende del alcance: un piloto de automatización es cuestión de
+                semanas; un sistema a medida completo, de meses. En el diagnóstico
+                inicial te damos un plazo concreto para tu caso antes de que
+                comprometas nada.
               </p>
             </div>
           </details>
           <details className="faq-item">
-            <summary>¿Cuánto tarda en ponerse en marcha?</summary>
+            <summary>¿Qué pasa después de la entrega?</summary>
             <div className="faq-body">
               <p>
-                En una demo de 20 minutos lo ves funcionando con tu operación.
-                La puesta en producción depende del alcance: desde una semana
-                si solo atiende consultas y agenda, un poco más si necesitas
-                integraciones a medida.
+                No entregamos y desaparecemos: acompañamos todo el desarrollo y
+                quedamos disponibles para soporte y mejoras. El sistema es tuyo y
+                evoluciona con tu operación.
               </p>
             </div>
           </details>
           <details className="faq-item">
-            <summary>¿Funciona para mi negocio?</summary>
+            <summary>¿Trabajan con cualquier rubro?</summary>
             <div className="faq-body">
               <p>
-                Si recibes consultas y quieres responder más rápido, sí. Lo
-                usan pymes de servicios, turismo y retail. La demo la adaptamos
-                a tu rubro y tus reglas de agendamiento.
+                Sí, mientras exista un proceso con pasos repetitivos y datos que se
+                muevan entre personas. Turismo, servicios, retail y operaciones
+                internas son nuestro terreno habitual.
               </p>
             </div>
           </details>
