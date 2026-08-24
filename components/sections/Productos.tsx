@@ -20,12 +20,7 @@ export default function Productos() {
               producto, Bitácora, también está en producción: lo conoces en
               el caso de estudio.
             </p>
-            <a
-              className="producto-link"
-              href="https://astra.astromind.cl"
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a className="producto-link" href="/astra">
               Conoce Astra →
             </a>
           </article>
