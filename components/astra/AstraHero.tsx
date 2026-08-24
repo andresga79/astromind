@@ -1,4 +1,5 @@
 import AstraChatDemo from "./AstraChatDemo";
+import { astraCalendlyUrl } from "@/data/astra-config";
 
 export default function AstraHero() {
   return (
@@ -14,7 +15,7 @@ export default function AstraHero() {
           <div className="hero-actions">
             <a
               className="btn btn-primary"
-              href="https://calendly.com/astromind/astra"
+              href={astraCalendlyUrl}
               rel="noreferrer"
               target="_blank"
             >

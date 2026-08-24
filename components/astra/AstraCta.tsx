@@ -1,3 +1,5 @@
+import { astraCalendlyUrl } from "@/data/astra-config";
+
 export default function AstraCta() {
   return (
     <section className="astra-cta">
@@ -6,7 +8,7 @@ export default function AstraCta() {
         <p>Agenda una demo de 20 minutos y ve cómo se vería en tu negocio.</p>
         <a
           className="btn btn-primary btn-lg"
-          href="https://calendly.com/astromind/astra"
+          href={astraCalendlyUrl}
           rel="noreferrer"
           target="_blank"
         >

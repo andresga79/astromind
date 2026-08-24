@@ -1,3 +1,5 @@
+import { astraCalendlyUrl } from "./astra-config";
+
 export interface PricingPlan {
   name: string;
   price: string;
@@ -20,7 +22,7 @@ export const astraPricing: PricingPlan[] = [
       "Reportes básicos",
     ],
     cta: "Agendar demo",
-    href: "https://calendly.com/astromind/astra",
+    href: astraCalendlyUrl,
   },
   {
     name: "Pro",
@@ -34,7 +36,7 @@ export const astraPricing: PricingPlan[] = [
       "Reportes avanzados",
     ],
     cta: "Agendar demo",
-    href: "https://calendly.com/astromind/astra",
+    href: astraCalendlyUrl,
     highlighted: true,
   },
   {
@@ -48,6 +50,6 @@ export const astraPricing: PricingPlan[] = [
       "Onboarding dedicado",
     ],
     cta: "Hablar con ventas",
-    href: "https://calendly.com/astromind/astra",
+    href: astraCalendlyUrl,
   },
 ];

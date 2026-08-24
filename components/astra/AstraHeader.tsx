@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { astraCalendlyUrl } from "@/data/astra-config";
 
 export default function AstraHeader() {
   return (
@@ -14,7 +15,7 @@ export default function AstraHeader() {
         </nav>
         <a
           className="btn btn-primary btn-sm"
-          href="https://calendly.com/astromind/astra"
+          href={astraCalendlyUrl}
           rel="noreferrer"
           target="_blank"
         >
