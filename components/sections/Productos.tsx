@@ -16,12 +16,11 @@ export default function Productos() {
               viste trabajando en el inicio.
             </p>
             <p className="producto-note">
-              Ya en producción — pregúntanos en el diagnóstico. Nuestro primer
-              producto, Bitácora, también está en producción: lo conoces en
-              el caso de estudio.
+              Ya en producción, respondiendo por ti en tus canales. Agenda una
+              demo y aprébalo con tus propios datos.
             </p>
             <a className="producto-link" href="/astra">
-              Conoce Astra →
+              Conoce Astra en detalle →
             </a>
           </article>
         </div>

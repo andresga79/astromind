@@ -3,7 +3,6 @@ import Faq from "@/components/Faq";
 import Hero from "@/components/sections/Hero";
 import Servicios from "@/components/sections/Servicios";
 import Productos from "@/components/sections/Productos";
-import Casos from "@/components/sections/Casos";
 import Tools from "@/components/sections/Tools";
 import Contacto from "@/components/sections/Contacto";
 
@@ -15,13 +14,10 @@ function Footer() {
         <nav aria-label="Navegación del pie">
           <ul className="footer-nav">
             <li>
-              <a href="#servicios">Servicios</a>
+              <a href="#funciones">Funciones</a>
             </li>
             <li>
               <a href="#productos">Productos</a>
-            </li>
-            <li>
-              <a href="#casos">Casos</a>
             </li>
             <li>
               <a href="#faq">Preguntas</a>
@@ -50,8 +46,8 @@ export default function Home() {
         <span id="top" />
         <Hero />
         <Servicios />
+
         <Productos />
-        <Casos />
         <Tools />
         <Contacto />
         <Faq />

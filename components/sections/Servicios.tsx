@@ -1,47 +1,48 @@
-/* SERVICIOS: registro editorial, no grilla de tarjetas */
+/* FUNCIONES: lo que hace Astra por tu negocio */
 export default function Servicios() {
   return (
-    <section className="section" id="servicios" aria-labelledby="servicios-title">
+    <section className="section" id="funciones" aria-labelledby="funciones-title">
       <div className="container servicios-grid">
         <div className="section-lead">
-          <h2 id="servicios-title">Lo que construimos</h2>
+          <h2 id="funciones-title">Lo que Astra hace por ti</h2>
           <p>
-            Cada proyecto parte de tu proceso real — no de una plantilla. Primero
-            diagnosticamos dónde se te escapa el tiempo, después construimos sobre
-            eso.
+            Astra no es un bot genérico: se entrena con las reglas y la
+            información de tu negocio para atender como lo harías tú, solo que
+            sin descanso. Empieza a trabajar desde el primer día.
           </p>
         </div>
         <div className="servicios-list">
           <article className="servicio">
-            <h3>Software a medida</h3>
+            <h3>Atiende en tus canales</h3>
             <p>
-              Sistemas web y APIs hechos para tu proceso exacto, no para el
-              proceso promedio del mercado. Tu operación deja de doblarse para
-              caber en una herramienta genérica.
+              Responde al instante en WhatsApp, Instagram y correo, las 24
+              horas. Aclara dudas repetitivas, comparte disponibilidad y recibe
+              consultas que antes se perdían fuera de horario.
             </p>
             <p className="servicio-meta">
-              Angular · Node · PostgreSQL · despliegue en la nube
+              WhatsApp · Instagram · correo · múltiples conversaciones a la vez
             </p>
           </article>
           <article className="servicio">
-            <h3>Automatización de procesos</h3>
+            <h3>Clasifica tus leads</h3>
             <p>
-              Conectamos las herramientas que ya usas para que los datos fluyan
-              sin copiar y pegar: WhatsApp, calendarios, planillas, facturación.
+              Astra entiende quién está listo para comprar, filtra según tus
+              criterios y prioriza las conversaciones. Tú te quedas con lo que
+              cierra, no con el ruido.
             </p>
             <p className="servicio-meta">
-              Integraciones · flujos sin código innecesario · reglas tuyas
+              Calificación automática · reglas que tú defines · reportes claros
             </p>
           </article>
           <article className="servicio">
-            <h3>Inteligencia artificial aplicada</h3>
+            <h3>Agenda reuniones</h3>
             <p>
-              Agentes que filtran, clasifican, responden y agendan siguiendo reglas
-              que tú defines. IA aplicada a tareas concretas, no a
-              demostraciones.
+              Toma horas, confirma y recuerda citas siguiendo las reglas de tu
+              negocio y tu calendario. El agendamiento ocurre en la
+              conversación, sin copiar datos de un lado a otro.
             </p>
             <p className="servicio-meta">
-              Nuestro motor: Astra · disponible
+              Integrado a tu agenda · confirmaciones automáticas · tu marca
             </p>
           </article>
         </div>

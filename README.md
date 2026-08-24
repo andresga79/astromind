@@ -1,7 +1,7 @@
 # astromind
 
-One-pager de Astromind Tecnología: software a medida, automatización e
-inteligencia artificial aplicada para pymes chilenas.
+One-pager de Astromind centrado en **Astra**, el agente de IA que responde,
+clasifica y agenda por tu negocio las 24 horas en WhatsApp, Instagram y correo.
 
 ## Stack
 
@@ -42,5 +42,5 @@ Las migraciones se ejecutan automáticamente antes de levantar el servicio web.
 
 ## Notas
 
-- Revisa `PRODUCT.md` para claims pendientes, como las métricas reales del caso
-  Bitácora en `components/sections/Casos.tsx`.
+- `DATABASE_URL` en `.env` apunta al Postgres local (puerto 5433). El full-stack
+  Docker (db, migrate, web) se levanta con `docker compose up --build`.
